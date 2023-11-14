@@ -1,0 +1,21 @@
+<!-- FILEPATH: /c:/Users/Thomas/Desktop/XHTML/htmx/myapp/task/templates/base.html -->
+
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My App{% endblock %}</title>
+    <!-- Import Bootstrap 5 CSS -->
+    {% bootstrap_css %}
+</head>
+
+<body style="height: 100vh;">
+    {% block content %}{% endblock %}
+    <!-- Import Bootstrap 5 JS -->
+    {% bootstrap_javascript %}
+</body>
+
+</html>
