@@ -130,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [BASE_DIR / "static"]    # for static files
 
 AUTH_USER_MODEL = 'task.User'   # for custom user model
+LOGIN_REDIRECT_URL = 'index'    # for login redirect
+LOGOUT_REDIRECT_URL = 'login'   # for logout redirect
+LOGIN_URL = 'login'             # for login url

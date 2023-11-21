@@ -10,3 +10,8 @@ urlpatterns = [
     path('register', views.RegisterView.as_view(), name='register'),
 
 ]
+
+htmx_views = [
+    path('check_username', views.CheckUserName, name='check_username'),
+]
+urlpatterns += htmx_views

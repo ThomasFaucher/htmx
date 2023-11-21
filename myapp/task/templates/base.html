@@ -1,7 +1,7 @@
 <!-- FILEPATH: /c:/Users/Thomas/Desktop/XHTML/htmx/myapp/task/templates/base.html -->
 
 {% load bootstrap5 %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +10,16 @@
     <title>{% block title %}My App{% endblock %}</title>
     <!-- Import Bootstrap 5 CSS -->
     {% bootstrap_css %}
+    <script src="https://unpkg.com/htmx.org@1.9.8"
+        integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
+        crossorigin="anonymous"></script>
+    <!--Import le fichier style.css dans static/css/style.css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body style="height: 100vh;">
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
     {% block content %}{% endblock %}
     <!-- Import Bootstrap 5 JS -->
     {% bootstrap_javascript %}

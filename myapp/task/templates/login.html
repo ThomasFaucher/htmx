@@ -8,13 +8,11 @@
 <div style="height: 100%" class="content d-flex justify-content-center align-items-center">
     <div class="card mx-auto" style="width: 18rem;">
         {% if messages %}
-        <div class="card-header">
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
-            {% endfor %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
         </div>
+        {% endfor %}
         {% endif %}
         <div class="card-body">
             <h5 class="card-title">Login</h5>
