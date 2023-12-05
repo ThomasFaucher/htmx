@@ -1,0 +1,15 @@
+
+    <div class="container">
+        <h1>Task List</h1>
+        <ul class="list-group">
+            {% for task in tasks %}
+                <li class="list-group-item">{{ task.description }}</li>
+                <span
+                class="btn btn-danger"
+                style="cursor: pointer;"
+                hx-delete="{% url 'task_delete' task.pk %}"
+                hx-target="#task-list"
+                hx-confirm="Delete this Task">X</span>
+            {% endfor %}
+        </ul>
+    </div>

@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body style="height: 100vh;">
-    <!-- Navbar -->
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' style="height: 100vh;">    <!-- Navbar -->
     {% include 'navbar.html' %}
     {% block content %}{% endblock %}
     <!-- Import Bootstrap 5 JS -->
