@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-end mb-4">
+    <form action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" id="search" name="search" placeholder="Search" class="form-control-sm mr-2"
+                hx-post="{% url 'search_task' %}" hx-target="#result" hx-trigger="keyup changes delay:500ms">
+    </form>
+    <div id="result">
+
+    </div>
+</div>

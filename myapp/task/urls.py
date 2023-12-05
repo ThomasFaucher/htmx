@@ -16,5 +16,6 @@ urlpatterns = [
 
 htmx_views = [
     path('check_username', views.CheckUserName, name='check_username'),
+    path("search", views.search_tasks, name="search_task"),
 ]
 urlpatterns += htmx_views

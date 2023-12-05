@@ -1,0 +1,15 @@
+<h1>Search Result</h1>
+
+{% if tasks %}
+<div class="col-xs-12 list-group">
+    {% for task in tasks %}
+    <div class="d-flex justify-content-between align-items-center list-group-item">
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+        <!-- Add more task details here -->
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No tasks found.</p>
+    {% endif %}
+</div>
