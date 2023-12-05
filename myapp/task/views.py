@@ -126,9 +126,11 @@ def search_tasks(request):
         search = request.POST.get("search", None)
         usertasks = request.user.tasks.all()
         results = Task.objects.filter(description__icontains=search).exclude(
-            description__in=usertasks
-        )
-
+            description__in=usertasks.values_list("description", flat=True)
+        )[:10]
+        # Transform Query in List
+        results = list(results)
+        print(results)
         return render(request, "task/search-result.html", {"tasks": results})
     else:
         return render(request, "task/search-result.html", {})
